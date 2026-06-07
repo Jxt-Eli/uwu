@@ -1,6 +1,7 @@
 <div align="center">
 
 # 🌸 `uwu` 🌸
+
 ### Universal Wallpaper Utility
 
 ```text
@@ -10,12 +11,12 @@
 █░░ █░██░██░█░░ █░░ 
  ███ ░█░░ █░░███ ░░ 
   ░░░ ░░░░ ░░ ░░░ ░ 
-   ░░░  ░   ░  ░░░  ```
-*Because your desktop deserves to look cute, instantly.*
+   ░░░  ░   ░  ░░░  
 
-[![Bash](https://img.shields.io/badge/Language-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)]()
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)]()
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-pink.svg?style=for-the-badge)]()
+
+  ✨Set static and live wallpapers with Material You themes✨
+  
+```
 
 </div>
 
@@ -75,6 +76,7 @@ uwu animated_scenery.mp4
 ```
 
 ### What happens under the hood?
+
 1. `uwu` checks if `matugen` is set up properly. If not, it configures it.
 2. It ensures `awww-daemon` is alive and kicking.
 3. It detects the media type. If it's a video, it runs an optimized `ffmpeg` pass to convert it to a looping palette-optimized GIF.
@@ -83,7 +85,7 @@ uwu animated_scenery.mp4
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. 
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingCuteFeature`)
