@@ -5,9 +5,10 @@ set -euo pipefail
 # 1. ENVIRONMENT VARIABLES & CONSTANTS
 # ==============================================================================
 # Define the read-only system backup paths and target user-space paths
-readonly SYSTEM_SHARE="/usr/share/hypr-wall-theme"
+readonly SYSTEM_SHARE="/usr/share/uwu"
 readonly USER_MATUGEN="$HOME/.config/matugen"
-readonly CACHE_DIR="$HOME/.cache/hypr-wall-theme"
+readonly CACHE_DIR="$HOME/.cache/uwu"
+readonly WALLPAPER_DIR="$HOME/Pictures/wallpapers"
 
 # ==============================================================================
 # 2. THE MATUGEN BOOTSTRAP PHASE
@@ -30,6 +31,9 @@ initialize_theme() {
     cp "$SYSTEM_SHARE/config.toml" "$USER_MATUGEN/config.toml"
     cp -r "$SYSTEM_SHARE/templates/." "$USER_MATUGEN/templates/"
     echo ":: Theme successfully deployed to $USER_MATUGEN"
+  elif [ -d "./assets/" ]; then
+    cp -r "./assets/." "$USER_MATUGEN"
+    echo ":: Theme successfully written to $USER_MATUGEN"
   else
     echo "Error: Core theme assets not found in $SYSTEM_SHARE." >&2
     exit 1
@@ -40,7 +44,7 @@ initialize_theme() {
 initialize_theme
 
 # ==============================================================================
-# 3. SWWW (NOW AWWW) DAEMON LIFECYCLE MANAGEMENT
+# 3. AWWW (FORMERLY SWWW) DAEMON LIFECYCLE MANAGEMENT
 # ==============================================================================
 # Ensure awww-daemon is running. If it isn't, spawn it automatically.
 if ! pgrep -x "awww-daemon" >/dev/null; then
@@ -54,11 +58,9 @@ if ! pgrep -x "awww-daemon" >/dev/null; then
 fi
 
 # ==============================================================================
-# 4. PREPARING FOR WORKLOAD (THE NEXT STEP)
+# 4. WALLPAPER APPLICATION, THEMING AND CONVERSION
 # ==============================================================================
 
-
-WALLPAPER_DIR="$HOME/Pictures/wallpapers"
 input_path="${1:-}"
 
 convert_to_gif() {
@@ -102,4 +104,3 @@ if [ -z "$input_path" ]; then
 fi
 
 check_file_type
-
