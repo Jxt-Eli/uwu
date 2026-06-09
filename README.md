@@ -58,7 +58,7 @@ chmod +x uwu.sh
 ln -s $(pwd)/uwu.sh ~/.local/bin/uwu
 ```
 
-> **Note:** The script expects some base system-wide templates at `/usr/share/hypr-wall-theme` to correctly seed your initial `~/.config/matugen` setup.
+> **Note:** The script expects some base system-wide templates at `/usr/share/uwu` to correctly seed your initial `~/.config/matugen` setup.
 
 ## 🚀 Usage
 
@@ -92,6 +92,9 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingCuteFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingCuteFeature`)
 5. Open a Pull Request
+
+> [!CAUTION]
+> Video wallpapers set may disable hyprlock lockscreen background and set it to default (No lockscreen background)
 
 ## 📝 License
 
